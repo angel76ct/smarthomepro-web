@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHomePro - Los Mejores Productos de Hogar Inteligente</title>
+    <meta name="description" content="Descubre los mejores productos de hogar inteligente disponibles en Amazon. Comparativas, reviews y ofertas especiales en dispositivos smart home.">
+    <meta name="keywords" content="hogar inteligente, smart home, domótica, alexa, google home, dispositivos inteligentes, amazon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #0a0a0a;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header mejorado */
+        header {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(10, 10, 10, 0.98);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #667eea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-cta {
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sección de búsqueda */
+        .search-section {
+            background: #111111;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .search-container {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 18px 25px 18px 60px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-select {
+            padding: 12px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .filter-select:hover {
+            border-color: #667eea;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .filter-select option {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        /* Stats */
+        .stats-section {
+            background: #111111;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Grid de productos */
+        .products-section {
+            background: #0a0a0a;
+            padding: 4rem 0;
+            min-height: 100vh;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #ffffff 0%, #667eea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(102, 126, 234, 0.3);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .discount-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            margin-bottom: 2rem;
+        }
+
+        .feature-tag {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.2);
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.3rem;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .feature-tag:hover {
+            background: rgba(102, 126, 234, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .rating-stars {
+            color: #ffd700;
+            font-size: 1.1rem;
+        }
+
+        .rating-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .product-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            flex: 1;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid rgba(102, 126, 234, 0.5);
+            flex: 1;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(102, 126, 234, 0.1);
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .amazon-badge {
+            background: linear-gradient(135deg, #ff9900, #ff6600);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .prime-badge {
+            background: #0073e6;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-section h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #667eea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .newsletter-form {
+            max-width: 600px;
+            margin: 2rem auto 0;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 18px 25px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .newsletter-btn {
+            padding: 18px 35px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .amazon-disclaimer {
+            background: rgba(255, 153, 0, 0.1);
+            border: 1px solid rgba(255, 153, 0, 0.3);
+            color: #ff9900;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(102, 126, 234, 0.9);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(100px);
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: rgba(102, 126, 234, 1);
+            transform: translateY(-2px);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.95);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                backdrop-filter: blur(20px);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input {
+                min-width: auto;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">SmartHomePro</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#comparativas">Comparativas</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>El Futuro del Hogar Inteligente</h1>
+                <p>Descubre los mejores productos smart home con análisis expertos, comparativas detalladas y ofertas exclusivas de Amazon</p>
+                <div class="hero-cta">
+                    <a href="#products" class="cta-button">
+                        <i class="fas fa-rocket"></i>
+                        Explorar Productos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Buscar productos smart home..." id="search-input">
+                </div>
+            </div>
+            <div class="filters">
+                <select class="filter-select" id="category-filter">
+                    <option value="">Todas las categorías</option>
+                    <option value="asistentes">Asistentes de voz</option>
+                    <option value="iluminacion">Iluminación</option>
+                    <option value="seguridad">Seguridad</option>
+                    <option value="climatizacion">Climatización</option>
+                    <option value="electrodomesticos">Electrodomésticos</option>
+                </select>
+                <select class="filter-select" id="price-filter">
+                    <option value="">Todos los precios</option>
+                    <option value="0-50">Menos de 50€</option>
+                    <option value="50-100">50€ - 100€</option>
+                    <option value="100-200">100€ - 200€</option>
+                    <option value="200+">Más de 200€</option>
+                </select>
+                <select class="filter-select" id="brand-filter">
+                    <option value="">Todas las marcas</option>
+                    <option value="amazon">Amazon</option>
+                    <option value="google">Google</option>
+                    <option value="philips">Philips</option>
+                    <option value="xiaomi">Xiaomi</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Productos Analizados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50k+</div>
+                    <div class="stat-label">Usuarios Satisfechos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4.9</div>
+                    <div class="stat-label">Puntuación Media</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Soporte Técnico</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid" id="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-microphone" style="color: #667eea;"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <h3 class="product-title">Amazon Echo Dot (4ª generación)</h3>
+                        <div class="product-price">
+                            39,99€
+                            <span class="original-price">59,99€</span>
+                            <span class="discount-badge">-33%</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="rating-stars">★★★★☆</div>
+                            <div class="rating-text">4.2 (12,453 reseñas)</div>
+                        </div>
+                        <p class="product-description">
+                            Altavoz inteligente con Alexa. Controla tu hogar con la voz, escucha música y mucho más.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag">Control por voz</span>
+                            <span class="feature-tag">Música streaming</span>
+                            <span class="feature-tag">Smart Home</span>
+                        </div>
+                        <div class="product-buttons">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fab fa-amazon"></i>
+                                Ver en Amazon
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-chart-line"></i>
+                                Comparar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-lightbulb" style="color: #ffd700;"></i>
+</div>
+                    <div class="product-info">
+                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <h3 class="product-title">Philips Hue White and Color Ambiance</h3>
+                        <div class="product-price">
+                            89,99€
+                            <span class="original-price">119,99€</span>
+                            <span class="discount-badge">-25%</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="rating-stars">★★★★★</div>
+                            <div class="rating-text">4.6 (8,921 reseñas)</div>
+                        </div>
+                        <p class="product-description">
+                            Bombilla LED inteligente con 16 millones de colores. Compatible con Alexa y Google Assistant.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag">16M colores</span>
+                            <span class="feature-tag">App móvil</span>
+                            <span class="feature-tag">Programable</span>
+                        </div>
+                        <div class="product-buttons">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fab fa-amazon"></i>
+                                Ver en Amazon
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-chart-line"></i>
+                                Comparar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-shield-alt" style="color: #ff6b6b;"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <h3 class="product-title">Ring Video Doorbell 4</h3>
+                        <div class="product-price">
+                            199,99€
+                            <span class="original-price">249,99€</span>
+                            <span class="discount-badge">-20%</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="rating-stars">★★★★☆</div>
+                            <div class="rating-text">4.3 (15,287 reseñas)</div>
+                        </div>
+                        <p class="product-description">
+                            Timbre inteligente con vídeo HD 1080p, detección de movimiento y audio bidireccional.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag">Video HD</span>
+                            <span class="feature-tag">Detección movimiento</span>
+                            <span class="feature-tag">Audio bidireccional</span>
+                        </div>
+                        <div class="product-buttons">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fab fa-amazon"></i>
+                                Ver en Amazon
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-chart-line"></i>
+                                Comparar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-thermometer-half" style="color: #00d4aa;"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <h3 class="product-title">Nest Thermostat</h3>
+                        <div class="product-price">
+                            229,99€
+                            <span class="original-price">279,99€</span>
+                            <span class="discount-badge">-18%</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="rating-stars">★★★★★</div>
+                            <div class="rating-text">4.7 (6,543 reseñas)</div>
+                        </div>
+                        <p class="product-description">
+                            Termostato inteligente que aprende tus horarios y ajusta la temperatura automáticamente.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag">Aprendizaje automático</span>
+                            <span class="feature-tag">Ahorro energético</span>
+                            <span class="feature-tag">Control remoto</span>
+                        </div>
+                        <div class="product-buttons">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fab fa-amazon"></i>
+                                Ver en Amazon
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-chart-line"></i>
+                                Comparar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-robot" style="color: #667eea;"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <h3 class="product-title">Xiaomi Mi Robot Vacuum</h3>
+                        <div class="product-price">
+                            299,99€
+                            <span class="original-price">399,99€</span>
+                            <span class="discount-badge">-25%</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="rating-stars">★★★★☆</div>
+                            <div class="rating-text">4.4 (9,876 reseñas)</div>
+                        </div>
+                        <p class="product-description">
+                            Robot aspirador inteligente con navegación láser y control por app móvil.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag">Navegación láser</span>
+                            <span class="feature-tag">App móvil</span>
+                            <span class="feature-tag">Programable</span>
+                        </div>
+                        <div class="product-buttons">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fab fa-amazon"></i>
+                                Ver en Amazon
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-chart-line"></i>
+                                Comparar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-wifi" style="color: #00d4aa;"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <h3 class="product-title">TP-Link Tapo P100 Smart Plug</h3>
+                        <div class="product-price">
+                            12,99€
+                            <span class="original-price">19,99€</span>
+                            <span class="discount-badge">-35%</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="rating-stars">★★★★☆</div>
+                            <div class="rating-text">4.1 (21,432 reseñas)</div>
+                        </div>
+                        <p class="product-description">
+                            Enchufe inteligente WiFi. Controla cualquier dispositivo desde tu smartphone.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag">Control remoto</span>
+                            <span class="feature-tag">Programador</span>
+                            <span class="feature-tag">Alexa compatible</span>
+                        </div>
+                        <div class="product-buttons">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fab fa-amazon"></i>
+                                Ver en Amazon
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-chart-line"></i>
+                                Comparar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Mantente Actualizado</h2>
+            <p>Recibe las últimas ofertas y reseñas de productos smart home directamente en tu email</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Tu email aquí..." required>
+                <button type="submit" class="newsletter-btn">
+                    <i class="fas fa-envelope"></i>
+                    Suscribirse
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SmartHomePro</h3>
+                    <p>Tu fuente confiable para encontrar los mejores productos de hogar inteligente. Análisis expertos y ofertas exclusivas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <a href="#home">Inicio</a>
+                    <a href="#products">Productos</a>
+                    <a href="#comparativas">Comparativas</a>
+                    <a href="#ofertas">Ofertas</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Categorías</h3>
+                    <a href="#">Asistentes de Voz</a>
+                    <a href="#">Iluminación</a>
+                    <a href="#">Seguridad</a>
+                    <a href="#">Climatización</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Soporte</h3>
+                    <a href="#">Centro de Ayuda</a>
+                    <a href="#">Contacto</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+            
+            <div class="amazon-disclaimer">
+                <strong>Aviso Legal:</strong> SmartHomePro es un participante del Programa de Afiliados de Amazon EU, un programa de publicidad para afiliados diseñado para ofrecer a sitios web un modo de obtener comisiones por publicidad, publicitando e incluyendo enlaces a Amazon.es. Los precios mostrados pueden no estar actualizados en tiempo real.
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmartHomePro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        const categoryFilter = document.getElementById('category-filter');
+        const priceFilter = document.getElementById('price-filter');
+        const brandFilter = document.getElementById('brand-filter');
+        const productsGrid = document.getElementById('products-grid');
+
+        function filterProducts() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedCategory = categoryFilter.value;
+            const selectedPrice = priceFilter.value;
+            const selectedBrand = brandFilter.value;
+            
+            const productCards = productsGrid.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                const title = card.querySelector('.product-title').textContent.toLowerCase();
+                const description = card.querySelector('.product-description').textContent.toLowerCase();
+                const price = parseFloat(card.querySelector('.product-price').textContent.replace('€', '').replace(',', '.'));
+                
+                let showCard = true;
+                
+                // Search filter
+                if (searchTerm && !title.includes(searchTerm) && !description.includes(searchTerm)) {
+                    showCard = false;
+                }
+                
+                // Price filter
+                if (selectedPrice) {
+                    const [min, max] = selectedPrice.split('-');
+                    if (max === undefined) {
+                        if (price <= parseFloat(min)) showCard = false;
+                    } else {
+                        if (price < parseFloat(min) || price > parseFloat(max)) showCard = false;
+                    }
+                }
+                
+                card.style.display = showCard ? 'block' : 'none';
+            });
+        }
+
+        searchInput.addEventListener('input', filterProducts);
+        categoryFilter.addEventListener('change', filterProducts);
+        priceFilter.addEventListener('change', filterProducts);
+        brandFilter.addEventListener('change', filterProducts);
+
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Newsletter form
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.newsletter-input').value;
+            alert('¡Gracias por suscribirte! Te enviaremos las mejores ofertas a ' + email);
+            this.reset();
+        });
+
+        // Product card animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
