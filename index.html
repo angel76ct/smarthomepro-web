@@ -764,6 +764,92 @@
             }
         }
     </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- CSS para estilos -->
+<style>
+  /* Tus estilos aquí */
+</style>
+
+<!-- JavaScript para funcionalidad -->
+
+   
+<script>
+// Funcionalidad de búsqueda
+const searchInput = document.getElementById('search-input');
+const clearSearchBtn = document.getElementById('clear-search');
+const categoryFilter = document.getElementById('category-filter');
+const priceFilter = document.getElementById('price-filter');
+const brandFilter = document.getElementById('brand-filter');
+const clearFiltersBtn = document.getElementById('clear-filters');
+
+// Mostrar/ocultar botón de limpiar búsqueda
+searchInput.addEventListener('input', function() {
+    if (this.value.length > 0) {
+        clearSearchBtn.style.display = 'block';
+    } else {
+        clearSearchBtn.style.display = 'none';
+    }
+});
+
+// Limpiar búsqueda
+clearSearchBtn.addEventListener('click', function() {
+    searchInput.value = '';
+    clearSearchBtn.style.display = 'none';
+    searchInput.focus();
+    // Aquí puedes agregar lógica para actualizar resultados
+    console.log('Búsqueda limpiada');
+});
+
+// Limpiar todos los filtros
+clearFiltersBtn.addEventListener('click', function() {
+    categoryFilter.value = '';
+    priceFilter.value = '';
+    brandFilter.value = '';
+    searchInput.value = '';
+    clearSearchBtn.style.display = 'none';
+    // Aquí puedes agregar lógica para actualizar resultados
+    console.log('Filtros limpiados');
+});
+
+// Event listeners para los filtros
+categoryFilter.addEventListener('change', function() {
+    console.log('Categoría seleccionada:', this.value);
+    // Aquí puedes agregar lógica para filtrar productos
+});
+
+priceFilter.addEventListener('change', function() {
+    console.log('Rango de precio seleccionado:', this.value);
+    // Aquí puedes agregar lógica para filtrar productos
+});
+
+brandFilter.addEventListener('change', function() {
+    console.log('Marca seleccionada:', this.value);
+    // Aquí puedes agregar lógica para filtrar productos
+});
+
+// Búsqueda en tiempo real (opcional)
+searchInput.addEventListener('input', function() {
+    console.log('Búsqueda:', this.value);
+    // Aquí puedes agregar lógica para búsqueda en tiempo real
+});
+</script>   
+    // Aquí 
+
+   
+   <script>
+  document.getElementById('search-input').addEventListener('input', function() {
+    // Lógica de búsqueda
+  });
+  
+  document.getElementById('category-filter').addEventListener('change', function() {
+    // Lógica de filtrado
+  });
+  // etc...
+</script>
+
+
+   
 </head>
 <body>
     <!-- Header -->
