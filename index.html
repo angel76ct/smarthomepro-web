@@ -10,7 +10,6 @@
 <meta name="robots" content="index, follow" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-
 <!-- FAVICON -->
 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="/favicon.png" type="image/png" />
@@ -28,9 +27,7 @@
 <meta name="twitter:description" content="Las mejores comparativas y reseñas de productos para un hogar inteligente." />
 <meta name="twitter:image" content="https://smarthomepro-reviews.netlify.app/preview-image.png" />
 
-
-    
-    <style>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -144,11 +141,31 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
 
-        /* Hero section */
+        /* Urgent Banner */
+        .urgent-banner {
+            background: linear-gradient(90deg, #ff4757, #ff3742);
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            font-weight: bold;
+            position: fixed;
+            top: 80px;
+            width: 100%;
+            z-index: 999;
+            animation: urgentPulse 2s infinite;
+            box-shadow: 0 2px 10px rgba(255, 71, 87, 0.3);
+        }
+
+        @keyframes urgentPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+
+        /* Hero section con elementos de conversión */
         .hero {
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
             color: white;
-            padding: 8rem 0 4rem;
+            padding: 12rem 0 4rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -236,6 +253,142 @@
             }
         }
 
+        /* NUEVA SECCIÓN: Deal of the Day */
+        .deal-of-day {
+            background: white;
+            margin: -2rem auto 4rem;
+            max-width: 900px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            padding: 2rem;
+            position: relative;
+            z-index: 3;
+            border: 3px solid #ff4757;
+        }
+
+        .deal-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .deal-title {
+            font-size: 2.2rem;
+            color: #ff4757;
+            margin-bottom: 0.5rem;
+            font-weight: 900;
+        }
+
+        .countdown-timer {
+            background: #ff4757;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .deal-product {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .deal-image {
+            text-align: center;
+            font-size: 4rem;
+        }
+
+        .deal-info h3 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .deal-rating {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .deal-features {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .deal-features li {
+            padding: 0.3rem 0;
+            color: #666;
+        }
+
+        .deal-features li::before {
+            content: '✓';
+            color: #2ed573;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .deal-price-section {
+            text-align: center;
+        }
+
+        .deal-old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.3rem;
+        }
+
+        .deal-new-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ff4757;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .deal-discount {
+            background: #2ed573;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .deal-cta {
+            background: linear-gradient(45deg, #ff4757, #ff3742);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: dealPulse 2s infinite;
+        }
+
+        @keyframes dealPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .deal-cta:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 71, 87, 0.6);
+        }
+
+        .stock-warning {
+            color: #ff4757;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
         /* Sección de búsqueda */
         .search-section {
             background: #111111;
@@ -316,7 +469,7 @@
             color: white;
         }
 
-        /* Stats */
+        /* Stats mejorados con trust signals */
         .stats-section {
             background: #111111;
             padding: 3rem 0;
@@ -362,7 +515,7 @@
             font-weight: 500;
         }
 
-        /* Grid de productos */
+        /* Grid de productos con mejoras */
         .products-section {
             background: #0a0a0a;
             padding: 4rem 0;
@@ -633,6 +786,79 @@
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
         }
 
+        /* Artículos sección mejorada */
+        .articles-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .article-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .article-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+
+        .article-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            margin-bottom: 20px;
+        }
+
+        .article-meta span {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .article-card a {
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .article-card a:hover {
+            transform: translateY(-2px);
+        }
+
         /* Footer */
         footer {
             background: #0a0a0a;
@@ -739,8 +965,18 @@
                 display: flex;
             }
             
+            .hero {
+                padding: 10rem 0 4rem;
+            }
+            
             .hero h1 {
                 font-size: 2.5rem;
+            }
+            
+            .deal-product {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1rem;
             }
             
             .search-container {
@@ -762,107 +998,28 @@
             .product-buttons {
                 flex-direction: column;
             }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-<!-- CSS para estilos -->
-<style>
-  /* Tus estilos aquí */
-</style>
-
-<!-- JavaScript para funcionalidad -->
-
-   
-<script>
-// Funcionalidad de búsqueda
-const searchInput = document.getElementById('search-input');
-const clearSearchBtn = document.getElementById('clear-search');
-const categoryFilter = document.getElementById('category-filter');
-const priceFilter = document.getElementById('price-filter');
-const brandFilter = document.getElementById('brand-filter');
-const clearFiltersBtn = document.getElementById('clear-filters');
-
-// Mostrar/ocultar botón de limpiar búsqueda
-searchInput.addEventListener('input', function() {
-    if (this.value.length > 0) {
-        clearSearchBtn.style.display = 'block';
-    } else {
-        clearSearchBtn.style.display = 'none';
-    }
-});
-
-// Limpiar búsqueda
-clearSearchBtn.addEventListener('click', function() {
-    searchInput.value = '';
-    clearSearchBtn.style.display = 'none';
-    searchInput.focus();
-    // Aquí puedes agregar lógica para actualizar resultados
-    console.log('Búsqueda limpiada');
-});
-
-// Limpiar todos los filtros
-clearFiltersBtn.addEventListener('click', function() {
-    categoryFilter.value = '';
-    priceFilter.value = '';
-    brandFilter.value = '';
-    searchInput.value = '';
-    clearSearchBtn.style.display = 'none';
-    // Aquí puedes agregar lógica para actualizar resultados
-    console.log('Filtros limpiados');
-});
-
-// Event listeners para los filtros
-categoryFilter.addEventListener('change', function() {
-    console.log('Categoría seleccionada:', this.value);
-    // Aquí puedes agregar lógica para filtrar productos
-});
-
-priceFilter.addEventListener('change', function() {
-    console.log('Rango de precio seleccionado:', this.value);
-    // Aquí puedes agregar lógica para filtrar productos
-});
-
-brandFilter.addEventListener('change', function() {
-    console.log('Marca seleccionada:', this.value);
-    // Aquí puedes agregar lógica para filtrar productos
-});
-
-// Búsqueda en tiempo real (opcional)
-searchInput.addEventListener('input', function() {
-    console.log('Búsqueda:', this.value);
-    // Aquí puedes agregar lógica para búsqueda en tiempo real
-});
-</script>   
-    // Aquí 
-
-   
-   <script>
-  document.getElementById('search-input').addEventListener('input', function() {
-    // Lógica de búsqueda
-  });
-  
-  document.getElementById('category-filter').addEventListener('change', function() {
-    // Lógica de filtrado
-  });
-  // etc...
-</script>
-
-
-   
 </head>
 <body>
+    <!-- Urgent Banner -->
+    <div class="urgent-banner">
+        ⚡ OFERTAS FLASH JULIO 2025: Hasta 45% descuento en Smart Home - ¡Solo hasta fin de mes! ⚡
+    </div>
+
     <!-- Header -->
     <header id="header">
         <nav class="container">
-   
             <a href="#" class="logo">SmartHomePro</a> 
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#products">Productos</a></li>
-                <li><a href="https://smarthomepro-reviews.netlify.app/smart-home-2025">Comparativas</a></li>
+                <li><a href="smart-home-2025.html">Comparativas</a></li>
                 <li><a href="https://amzn.to/4lSoJEk">Ofertas</a></li>
-                <!--<li><a href="#blog">Blog</a></li> -->
                 <li><a href="politica-privacidad.html">Contacto</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -877,13 +1034,51 @@ searchInput.addEventListener('input', function() {
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>El Futuro del Hogar Inteligente</h1>
+                <h1>🔥 Ofertas Smart Home Julio 2025</h1>
                 <p>Descubre los mejores productos smart home con análisis expertos, comparativas detalladas y ofertas exclusivas de Amazon</p>
                 <div class="hero-cta">
-                    <a href="#products" class="cta-button">
+                    <a href="#deal-of-day" class="cta-button">
                         <i class="fas fa-rocket"></i>
-                        Explorar Productos
+                        Ver Chollo del Día
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deal of the Day -->
+    <section class="container" id="deal-of-day">
+        <div class="deal-of-day">
+            <div class="deal-header">
+                <h2 class="deal-title">🎯 CHOLLO DEL DÍA</h2>
+                <div class="countdown-timer" id="countdown">⏰ Termina en: 23h 45m 12s</div>
+            </div>
+            
+            <div class="deal-product">
+                <div class="deal-image">
+                    <i class="fas fa-microphone" style="color: #667eea;"></i>
+                </div>
+                
+                <div class="deal-info">
+                    <h3>Amazon Echo Dot (4ª gen) + Bombilla Philips Hue GRATIS</h3>
+                    <div class="deal-rating">⭐⭐⭐⭐⭐ (12,453 valoraciones)</div>
+                    <ul class="deal-features">
+                        <li>Alexa mejorada con IA avanzada</li>
+                        <li>Sonido 50% superior vs generación anterior</li>
+                        <li>Bombilla inteligente Philips Hue GRATIS (valor 29€)</li>
+                        <li>Control por voz natural y fluido</li>
+                        <li>Compatible con todos tus dispositivos smart</li>
+                    </ul>
+                </div>
+                
+                <div class="deal-price-section">
+                    <span class="deal-old-price">89,98€</span>
+                    <span class="deal-new-price">39,99€</span>
+                    <div class="deal-discount">-56% AHORRO</div>
+                    <a href="https://amzn.to/4o2IrhZ" class="deal-cta">
+                        🚀 VER CHOLLO EN AMAZON
+                    </a>
+                    <p class="stock-warning">⚡ Solo quedan 8 unidades al precio especial</p>
                 </div>
             </div>
         </div>
@@ -925,25 +1120,25 @@ searchInput.addEventListener('input', function() {
         </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- Stats Section con trust signals -->
     <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Productos Analizados</div>
+                    <div class="stat-number">15,847</div>
+                    <div class="stat-label">Hogares Conectados</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">50k+</div>
-                    <div class="stat-label">Usuarios Satisfechos</div>
+                    <div class="stat-number">€485</div>
+                    <div class="stat-label">Ahorro Promedio/Año</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">4.9</div>
-                    <div class="stat-label">Puntuación Media</div>
+                    <div class="stat-number">97%</div>
+                    <div class="stat-label">Satisfacción Cliente</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">24/7</div>
-                    <div class="stat-label">Soporte Técnico</div>
+                    <div class="stat-label">Soporte Experto</div>
                 </div>
             </div>
         </div>
@@ -952,7 +1147,7 @@ searchInput.addEventListener('input', function() {
     <!-- Products Section -->
     <section class="products-section" id="products">
         <div class="container">
-            <h2 class="section-title">Productos Destacados</h2>
+            <h2 class="section-title">🏆 Productos Más Vendidos</h2>
             <div class="products-grid" id="products-grid">
                 <!-- Producto 1 -->
                 <div class="product-card">
@@ -960,7 +1155,7 @@ searchInput.addEventListener('input', function() {
                         <i class="fas fa-microphone" style="color: #667eea;"></i>
                     </div>
                     <div class="product-info">
-                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <div class="amazon-badge">Disponible en Amazon <span class="prime-badge">Prime</span></div>
                         <h3 class="product-title">Amazon Echo Dot (4ª generación)</h3>
                         <div class="product-price">
                             39,99€
@@ -969,7 +1164,7 @@ searchInput.addEventListener('input', function() {
                         </div>
                         <div class="product-rating">
                             <div class="rating-stars">★★★★☆</div>
-                            <div class="rating-text">4.2 (12,453 reseñas)</div>
+                            <div class="rating-text">4.2 (12,453 reseñas) • #1 Más Vendido</div>
                         </div>
                         <p class="product-description">
                             Altavoz inteligente con Alexa. Controla tu hogar con la voz, escucha música y mucho más.
@@ -982,11 +1177,11 @@ searchInput.addEventListener('input', function() {
                         <div class="product-buttons">
                             <a href="https://amzn.to/4o2IrhZ" class="btn btn-primary">
                                 <i class="fab fa-amazon"></i>
-                                Ver en Amazon
+                                Ver Oferta en Amazon
                             </a>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="mejor-altavoz-inteligente-2025.html" class="btn btn-secondary">
                                 <i class="fas fa-chart-line"></i>
-                                Comparar
+                                Leer Review
                             </a>
                         </div>
                     </div>
@@ -996,9 +1191,9 @@ searchInput.addEventListener('input', function() {
                 <div class="product-card">
                     <div class="product-image">
                         <i class="fas fa-lightbulb" style="color: #ffd700;"></i>
-</div>
+                    </div>
                     <div class="product-info">
-                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <div class="amazon-badge">Disponible en Amazon <span class="prime-badge">Prime</span></div>
                         <h3 class="product-title">Philips Hue White and Color Ambiance</h3>
                         <div class="product-price">
                             89,99€
@@ -1007,7 +1202,7 @@ searchInput.addEventListener('input', function() {
                         </div>
                         <div class="product-rating">
                             <div class="rating-stars">★★★★★</div>
-                            <div class="rating-text">4.6 (8,921 reseñas)</div>
+                            <div class="rating-text">4.6 (8,921 reseñas) • Editor's Choice</div>
                         </div>
                         <p class="product-description">
                             Bombilla LED inteligente con 16 millones de colores. Compatible con Alexa y Google Assistant.
@@ -1020,11 +1215,11 @@ searchInput.addEventListener('input', function() {
                         <div class="product-buttons">
                             <a href="https://amzn.to/44VseUx" class="btn btn-primary">
                                 <i class="fab fa-amazon"></i>
-                                Ver en Amazon
+                                Ver Precio Especial
                             </a>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="smart-home-2025.html" class="btn btn-secondary">
                                 <i class="fas fa-chart-line"></i>
-                                Comparar
+                                Comparativa
                             </a>
                         </div>
                     </div>
@@ -1036,7 +1231,7 @@ searchInput.addEventListener('input', function() {
                         <i class="fas fa-shield-alt" style="color: #ff6b6b;"></i>
                     </div>
                     <div class="product-info">
-                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <div class="amazon-badge">Disponible en Amazon <span class="prime-badge">Prime</span></div>
                         <h3 class="product-title">Ring Video Doorbell 4</h3>
                         <div class="product-price">
                             199,99€
@@ -1045,7 +1240,7 @@ searchInput.addEventListener('input', function() {
                         </div>
                         <div class="product-rating">
                             <div class="rating-stars">★★★★☆</div>
-                            <div class="rating-text">4.3 (15,287 reseñas)</div>
+                            <div class="rating-text">4.3 (15,287 reseñas) • Mejor Seguridad</div>
                         </div>
                         <p class="product-description">
                             Timbre inteligente con vídeo HD 1080p, detección de movimiento y audio bidireccional.
@@ -1058,11 +1253,11 @@ searchInput.addEventListener('input', function() {
                         <div class="product-buttons">
                             <a href="https://amzn.to/453ZKGY" class="btn btn-primary">
                                 <i class="fab fa-amazon"></i>
-                                Ver en Amazon
+                                Ver Oferta Limitada
                             </a>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="smart-home-2025.html" class="btn btn-secondary">
                                 <i class="fas fa-chart-line"></i>
-                                Comparar
+                                Análisis Completo
                             </a>
                         </div>
                     </div>
@@ -1074,7 +1269,7 @@ searchInput.addEventListener('input', function() {
                         <i class="fas fa-thermometer-half" style="color: #00d4aa;"></i>
                     </div>
                     <div class="product-info">
-                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <div class="amazon-badge">Disponible en Amazon <span class="prime-badge">Prime</span></div>
                         <h3 class="product-title">Nest Thermostat</h3>
                         <div class="product-price">
                             229,99€
@@ -1083,7 +1278,7 @@ searchInput.addEventListener('input', function() {
                         </div>
                         <div class="product-rating">
                             <div class="rating-stars">★★★★★</div>
-                            <div class="rating-text">4.7 (6,543 reseñas)</div>
+                            <div class="rating-text">4.7 (6,543 reseñas) • Mejor Ahorro</div>
                         </div>
                         <p class="product-description">
                             Termostato inteligente que aprende tus horarios y ajusta la temperatura automáticamente.
@@ -1096,11 +1291,11 @@ searchInput.addEventListener('input', function() {
                         <div class="product-buttons">
                             <a href="https://amzn.to/4kVvuDQ" class="btn btn-primary">
                                 <i class="fab fa-amazon"></i>
-                                Ver en Amazon
+                                Mejor Precio Garantizado
                             </a>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="smart-home-2025.html" class="btn btn-secondary">
                                 <i class="fas fa-chart-line"></i>
-                                Comparar
+                                Review Experta
                             </a>
                         </div>
                     </div>
@@ -1112,7 +1307,7 @@ searchInput.addEventListener('input', function() {
                         <i class="fas fa-robot" style="color: #667eea;"></i>
                     </div>
                     <div class="product-info">
-                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <div class="amazon-badge">Disponible en Amazon <span class="prime-badge">Prime</span></div>
                         <h3 class="product-title">Xiaomi Mi Robot Vacuum</h3>
                         <div class="product-price">
                             299,99€
@@ -1121,7 +1316,7 @@ searchInput.addEventListener('input', function() {
                         </div>
                         <div class="product-rating">
                             <div class="rating-stars">★★★★☆</div>
-                            <div class="rating-text">4.4 (9,876 reseñas)</div>
+                            <div class="rating-text">4.4 (9,876 reseñas) • Mejor Limpieza</div>
                         </div>
                         <p class="product-description">
                             Robot aspirador inteligente con navegación láser y control por app móvil.
@@ -1134,11 +1329,11 @@ searchInput.addEventListener('input', function() {
                         <div class="product-buttons">
                             <a href="https://amzn.to/417cjQo" class="btn btn-primary">
                                 <i class="fab fa-amazon"></i>
-                                Ver en Amazon
+                                Oferta Flash
                             </a>
                             <a href="https://amzn.to/46WiwlR" class="btn btn-secondary">
                                 <i class="fas fa-chart-line"></i>
-                                Comparar
+                                Comparar Modelos
                             </a>
                         </div>
                     </div>
@@ -1150,7 +1345,7 @@ searchInput.addEventListener('input', function() {
                         <i class="fas fa-wifi" style="color: #00d4aa;"></i>
                     </div>
                     <div class="product-info">
-                        <div class="amazon-badge">Disponible en Amazon</div>
+                        <div class="amazon-badge">Disponible en Amazon <span class="prime-badge">Prime</span></div>
                         <h3 class="product-title">TP-Link Tapo P100 Smart Plug</h3>
                         <div class="product-price">
                             12,99€
@@ -1159,7 +1354,7 @@ searchInput.addEventListener('input', function() {
                         </div>
                         <div class="product-rating">
                             <div class="rating-stars">★★★★☆</div>
-                            <div class="rating-text">4.1 (21,432 reseñas)</div>
+                            <div class="rating-text">4.1 (21,432 reseñas) • Mejor Valor</div>
                         </div>
                         <p class="product-description">
                             Enchufe inteligente WiFi. Controla cualquier dispositivo desde tu smartphone.
@@ -1172,11 +1367,11 @@ searchInput.addEventListener('input', function() {
                         <div class="product-buttons">
                             <a href="https://amzn.to/4mcKkHc" class="btn btn-primary">
                                 <i class="fab fa-amazon"></i>
-                                Ver en Amazon
+                                Precio Mínimo
                             </a>
                             <a href="https://amzn.to/3IBTaQq" class="btn btn-secondary">
                                 <i class="fas fa-chart-line"></i>
-                                Comparar
+                                Guía Instalación
                             </a>
                         </div>
                     </div>
@@ -1185,16 +1380,55 @@ searchInput.addEventListener('input', function() {
         </div>
     </section>
 
+    <!-- Sección de Artículos -->
+    <section class="articles-section">
+        <div class="container">
+            <h2 style="text-align: center; color: #2c3e50; margin-bottom: 40px; font-size: 2.5em;">
+                📚 Guías y Reviews Especializadas
+            </h2>
+            
+            <div class="articles-grid">
+                <!-- Artículo 1: Altavoces Inteligentes -->
+                <div class="article-card">
+                    <div class="article-icon">🔊</div>
+                    <h3>Los 7 Mejores Altavoces Inteligentes de 2025</h3>
+                    <p>Comparativa completa de Amazon Echo, Google Nest, Apple HomePod y más. Guía actualizada con precios y características.</p>
+                    <div class="article-meta">
+                        <span style="background: #e74c3c; color: white;">⭐ Recomendado</span>
+                        <span style="background: #3498db; color: white;">🕒 Actualizado</span>
+                    </div>
+                    <a href="mejor-altavoz-inteligente-2025.html" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24);">
+                        📖 Leer Guía Completa
+                    </a>
+                </div>
+                
+                <!-- Artículo 2: Smart Home 2025 -->
+                <div class="article-card">
+                    <div class="article-icon">🏠</div>
+                    <h3>Guía Smart Home 2025: Automatiza tu Hogar</h3>
+                    <p>Los mejores dispositivos de domótica, asistentes, sensores, iluminación y más para hacer tu casa más inteligente en 2025.</p>
+                    <div class="article-meta">
+                        <span style="background: #27ae60; color: white;">🔥 Nuevo</span>
+                        <span style="background: #f39c12; color: white;">🏡 Domótica</span>
+                    </div>
+                    <a href="smart-home-2025.html" style="background: linear-gradient(45deg, #00b894, #00cec9);">
+                        📖 Leer Guía Completa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Newsletter Section -->
     <section class="newsletter-section">
         <div class="container">
-            <h2>Mantente Actualizado</h2>
+            <h2>🔔 Mantente Actualizado</h2>
             <p>Recibe las últimas ofertas y reseñas de productos smart home directamente en tu email</p>
             <form class="newsletter-form">
                 <input type="email" class="newsletter-input" placeholder="Tu email aquí..." required>
                 <button type="submit" class="newsletter-btn">
                     <i class="fas fa-envelope"></i>
-                    Suscribirse
+                    Suscribirse Gratis
                 </button>
             </form>
         </div>
@@ -1212,7 +1446,7 @@ searchInput.addEventListener('input', function() {
                 <h3>Navegación</h3>
                 <a href="#home">Inicio</a>
                 <a href="#products">Productos</a>
-                <a href="https://smarthomepro-reviews.netlify.app/smart-home-2025">Comparativas</a>
+                <a href="smart-home-2025.html">Comparativas</a>
                 <a href="https://amzn.to/4l83vB9">Ofertas</a>
             </div>
             <div class="footer-section">
@@ -1241,7 +1475,6 @@ searchInput.addEventListener('input', function() {
     </div>
 </footer>
 
-
     <!-- Back to Top Button -->
     <button class="back-to-top" id="back-to-top">
         <i class="fas fa-arrow-up"></i>
@@ -1249,6 +1482,24 @@ searchInput.addEventListener('input', function() {
 
     <!-- JavaScript -->
     <script>
+        // Countdown Timer para Deal of the Day
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            const distance = tomorrow.getTime() - now;
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `⏰ Termina en: ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
@@ -1377,54 +1628,180 @@ searchInput.addEventListener('input', function() {
             });
         }, observerOptions);
 
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script> 
-    <!-- Sección de Artículos -->
-<section class="articles-section" style="padding: 60px 20px; background: #f8f9fa;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 40px; font-size: 2.5em;">
-            📚 Guías y Reviews Especializadas
-        </h2>
-        
-        <div class="articles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-            
-            <!-- Artículo 1: Altavoces Inteligentes -->
-            <div class="article-card" style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                <div class="article-icon" style="font-size: 3em; text-align: center; margin-bottom: 20px;">🔊</div>
-                <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">Los 7 Mejores Altavoces Inteligentes de 2025</h3>
-                <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Comparativa completa de Amazon Echo, Google Nest, Apple HomePod y más. Guía actualizada con precios y características.</p>
-                <div class="article-meta" style="margin-bottom: 20px;">
-                    <span style="background: #e74c3c; color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.9em;">⭐ Recomendado</span>
-                    <span style="background: #3498db; color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.9em; margin-left: 10px;">🕒 Actualizado</span>
-                </div>
-                <a href="mejor-altavoz-inteligente-2025.html" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; display: inline-block; font-weight: bold; transition: transform 0.3s ease;">
-                    📖 Leer Guía Completa
-                </a>
-            </div>
-            
-            <!-- Artículo 2: Smart Home 2025 -->
-<div class="article-card" style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-    <div class="article-icon" style="font-size: 3em; text-align: center; margin-bottom: 20px;">🏠</div>
-    <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">Guía Smart Home 2025: Automatiza tu Hogar</h3>
-    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Los mejores dispositivos de domótica, asistentes, sensores, iluminación y más para hacer tu casa más inteligente en 2025.</p>
-    <div class="article-meta" style="margin-bottom: 20px;">
-        <span style="background: #27ae60; color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.9em;">🔥 Nuevo</span>
-        <span style="background: #f39c12; color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.9em; margin-left: 10px;">🏡 Domótica</span>
-    </div>
-    <a href="smart-home-2025.html" style="background: linear-gradient(45deg, #00b894, #00cec9); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; display: inline-block; font-weight: bold; transition: transform 0.3s ease;">
-        📖 Leer Guía Completa
-    </a>
-</div>
+        document.
 
-            </div>
+
+document.querySelectorAll('.product-card, .stat-card, .article-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Lazy loading de imágenes (si las agregas en el futuro)
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        // Tracking de clicks en productos para analytics
+        document.querySelectorAll('.btn-primary').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+                // Aquí puedes agregar Google Analytics o tu sistema de tracking
+                console.log('Producto clickeado:', productTitle);
+            });
+        });
+
+        // Efecto parallax sutil para el hero
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Preloader (opcional)
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        // Toast notifications para mejores conversiones
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-content">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+                    <span>${message}</span>
+                </div>
+            `;
             
-        </div>
-    </div>
-</section>
+            // Estilos del toast
+            toast.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${type === 'success' ? '#2ed573' : '#ff4757'};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 10px;
+                z-index: 10000;
+                transform: translateX(400px);
+                transition: transform 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            `;
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.transform = 'translateX(0)';
+            }, 100);
+            
+            setTimeout(() => {
+                toast.style.transform = 'translateX(400px)';
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, 3000);
+        }
+
+        // Simular notificaciones de compra (social proof)
+        const notifications = [
+            'Juan de Madrid acaba de comprar un Echo Dot',
+            'María de Barcelona ha ahorrado 45€ en iluminación',
+            'Carlos de Valencia configuró su hogar inteligente',
+            'Ana de Sevilla compró el termostato Nest'
+        ];
+
+        function showRandomNotification() {
+            const message = notifications[Math.floor(Math.random() * notifications.length)];
+            showToast(message, 'success');
+        }
+
+        // Mostrar notificación cada 15 segundos
+        setInterval(showRandomNotification, 15000);
+
+        // Detectar salida del usuario (exit intent)
+        let exitIntentShown = false;
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY <= 0 && !exitIntentShown) {
+                exitIntentShown = true;
+                showToast('🎯 ¡Espera! ¿Viste nuestro chollo del día?', 'info');
+            }
+        });
+
+        // Urgency timer actualización
+        function createUrgencyEffect() {
+            const urgentBanner = document.querySelector('.urgent-banner');
+            if (urgentBanner) {
+                setInterval(() => {
+                    urgentBanner.style.opacity = '0.8';
+                    setTimeout(() => {
+                        urgentBanner.style.opacity = '1';
+                    }, 200);
+                }, 3000);
+            }
+        }
+
+        createUrgencyEffect();
+
+        // Optimización de rendimiento
+        const handleScrollThrottled = throttle(function() {
+            // Cualquier lógica de scroll aquí
+        }, 16);
+
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleScrollThrottled);
+    </script>
+
+    <!-- Structured Data para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SmartHomePro",
+        "url": "https://smarthomepro-reviews.netlify.app/",
+        "description": "Las mejores comparativas y reseñas de productos para un hogar inteligente",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://smarthomepro-reviews.netlify.app/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SmartHomePro",
+        "url": "https://smarthomepro-reviews.netlify.app/",
+        "logo": "https://smarthomepro-reviews.netlify.app/logo.png",
+        "sameAs": [
+            "https://twitter.com/smarthomepro",
+            "https://facebook.com/smarthomepro"
+        ]
+    }
+    </script>
 </body>
 </html>
