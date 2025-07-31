@@ -1007,9 +1007,9 @@
 </head>
 <body>
     <!-- Urgent Banner -->
-    <div class="urgent-banner">
-        ⚡ OFERTAS FLASH JULIO 2025: Hasta 45% descuento en Smart Home - ¡Solo hasta fin de mes! ⚡
-    </div>
+    <div class="urgent-banner" id="urgent-banner">
+    ⚡ OFERTAS FLASH JULIO 2025: Hasta 45% descuento en Smart Home - ¡Solo hasta fin de mes! ⚡
+</div>
 
     <!-- Header -->
     <header id="header">
@@ -1034,7 +1034,7 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>🔥 Ofertas Smart Home Julio 2025</h1>
+                <h1 id="hero-title">🔥 Ofertas Smart Home Julio 2025</h1>
                 <p>Descubre los mejores productos smart home con análisis expertos, comparativas detalladas y ofertas exclusivas de Amazon</p>
                 <div class="hero-cta">
                     <a href="#deal-of-day" class="cta-button">
@@ -1499,7 +1499,80 @@
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
+// Mensajes automáticos por mes
+function updateMonthlyMessages() {
+    const currentMonth = new Date().getMonth(); // 0 = Enero, 1 = Febrero, etc.
+    
+    const monthMessages = {
+        0: { // Enero
+            banner: "⚡ OFERTAS POST-NAVIDAD ENERO 2025: Hasta 60% descuento - ¡Últimas unidades! ⚡",
+            hero: "🔥 Ofertas Smart Home Enero 2025"
+        },
+        1: { // Febrero
+            banner: "⚡ OFERTAS SAN VALENTÍN FEBRERO 2025: Hasta 45% descuento - ¡Regala tecnología! ⚡",
+            hero: "💝 Ofertas Smart Home San Valentín 2025"
+        },
+        2: { // Marzo
+            banner: "⚡ OFERTAS PRIMAVERA MARZO 2025: Hasta 50% descuento - ¡Renueva tu hogar! ⚡",
+            hero: "🌸 Ofertas Smart Home Primavera 2025"
+        },
+        3: { // Abril
+            banner: "⚡ OFERTAS PASCUA ABRIL 2025: Hasta 40% descuento - ¡Moderniza tu casa! ⚡",
+            hero: "🐰 Ofertas Smart Home Abril 2025"
+        },
+        4: { // Mayo
+            banner: "⚡ OFERTAS MAYO 2025: Hasta 45% descuento - ¡Prepara el verano! ⚡",
+            hero: "☀️ Ofertas Smart Home Mayo 2025"
+        },
+        5: { // Junio
+            banner: "⚡ OFERTAS VERANO JUNIO 2025: Hasta 50% descuento - ¡Climatiza tu hogar! ⚡",
+            hero: "🏖️ Ofertas Smart Home Verano 2025"
+        },
+        6: { // Julio
+            banner: "⚡ OFERTAS FLASH JULIO 2025: Hasta 45% descuento en Smart Home - ¡Solo hasta fin de mes! ⚡",
+            hero: "🔥 Ofertas Smart Home Julio 2025"
+        },
+        7: { // Agosto
+            banner: "⚡ OFERTAS AGOSTO 2025: Hasta 50% descuento - ¡Últimas semanas del verano! ⚡",
+            hero: "🌊 Ofertas Smart Home Agosto 2025"
+        },
+        8: { // Septiembre
+            banner: "⚡ OFERTAS VUELTA AL COLE SEPTIEMBRE 2025: Hasta 45% descuento - ¡Automatiza tu rutina! ⚡",
+            hero: "🎒 Ofertas Smart Home Septiembre 2025"
+        },
+        9: { // Octubre
+            banner: "⚡ OFERTAS OTOÑO OCTUBRE 2025: Hasta 55% descuento - ¡Prepara tu hogar! ⚡",
+            hero: "🍂 Ofertas Smart Home Octubre 2025"
+        },
+        10: { // Noviembre
+            banner: "⚡ BLACK FRIDAY NOVIEMBRE 2025: Hasta 70% descuento - ¡Máximo ahorro del año! ⚡",
+            hero: "🛍️ Black Friday Smart Home 2025"
+        },
+        11: { // Diciembre
+            banner: "⚡ OFERTAS NAVIDAD DICIEMBRE 2025: Hasta 60% descuento - ¡Regalos perfectos! ⚡",
+            hero: "🎄 Ofertas Smart Home Navidad 2025"
+        }
+    };
+    
+    const currentMessages = monthMessages[currentMonth];
+    
+    // Actualizar banner
+    const bannerElement = document.getElementById('urgent-banner');
+    if (bannerElement && currentMessages) {
+        bannerElement.textContent = currentMessages.banner;
+    }
+    
+    // Actualizar título hero
+    const heroTitle = document.getElementById('hero-title');
+    if (heroTitle && currentMessages) {
+        heroTitle.textContent = currentMessages.hero;
+    }
+}
 
+// Ejecutar al cargar la página
+updateMonthlyMessages();
+
+       
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
