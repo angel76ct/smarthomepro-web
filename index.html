@@ -1876,5 +1876,15 @@ document.querySelectorAll('.product-card, .stat-card, .article-card').forEach(el
         ]
     }
     </script>
+<script>
+    // Configurar enlaces de Amazon automáticamente
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon."]').forEach(link => {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener');
+        });
+    });
+    </script>
+   
 </body>
 </html>
