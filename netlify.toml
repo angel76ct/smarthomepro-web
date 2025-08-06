@@ -1,0 +1,86 @@
+# netlify.toml
+
+# ======================
+# REDIRECCIONES DE PÁGINAS
+# ======================
+
+# Artículos principales
+[[redirects]]
+  from = "/smart-home-2025"
+  to = "/smart-home-2025.html"
+  status = 200
+
+[[redirects]]
+  from = "/mejor-altavoz-inteligente-2025"
+  to = "/mejor-altavoz-inteligente-2025.html"
+  status = 200
+
+# Páginas legales
+[[redirects]]
+  from = "/politica-privacidad"
+  to = "/politica-privacidad.html"
+  status = 200
+
+[[redirects]]
+  from = "/politica-cookies"
+  to = "/politica-cookies.html"
+  status = 200
+
+[[redirects]]
+  from = "/aviso-legal"
+  to = "/aviso-legal.html"
+  status = 200
+
+[[redirects]]
+  from = "/aviso-afiliacion"
+  to = "/aviso-afiliacion.html"
+  status = 200
+
+# ======================
+# ENMASCARAMIENTO DE AFILIADOS
+# ======================
+
+# Usa tu ID real de afiliado (ej: tuID-21)
+[[redirects]]
+  from = "/go/echo-dot"
+  to = "https://amzn.to/4o2IrhZ?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4o2IrhZ?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/philips-hue"
+  to = "https://amzn.to/44VseUx?tag=smarthomepro-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/44VseUx?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/ring-doorbell"
+  to = "https://amzn.to/453ZKGY?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/453ZKGY?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/nest-thermostat"
+  to = "https://amzn.to/4kVvuDQ?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4kVvuDQ?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/xiaomi-vacuum"
+  to = "https://amzn.to/4l6PUtM?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4l6PUtM?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/tapo-p100"
+  to = "https://amzn.to/4mcKkHc?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4mcKkHc?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+# ======================
+# REDIRECCIÓN POR DEFECTO
+# ======================
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
