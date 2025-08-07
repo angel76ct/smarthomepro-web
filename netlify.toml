@@ -113,6 +113,52 @@
   status = 301
   headers = { Link = "<https://amzn.to/44KNWu7?tag=smarthomepro2-21>; rel=\"sponsored\"" }
 
+  # ======================
+# ENMASCARAMIENTO DE AFILIADOS: SMART HOME 2025
+# ======================
+
+[[redirects]]
+  from = "/go/echo-hub"
+  to = "https://amzn.to/4f4nQWu?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4f4nQWu?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/philips-hue-pack"
+  to = "https://amzn.to/3IKgBaa?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3IKgBaa?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/nest-thermostat"
+  to = "https://amzn.to/45mXITm?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/45mXITm?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/tplink-kasa-pack"
+  to = "https://amzn.to/3H5SwKr?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3H5SwKr?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/ring-indoor-cam"
+  to = "https://amzn.to/44Oh7g0?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/44Oh7g0?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/aqara-sensor-pack"
+  to = "https://amzn.to/3J236CF?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3J236CF?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/yale-linus"
+  to = "https://amzn.to/3GUmxgi?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3GUmxgi?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
   [[redirects]]
   from = "/go/ofertas"
   to = "https://amzn.to/4l83vB9?tag=smarthomepro2-21"
