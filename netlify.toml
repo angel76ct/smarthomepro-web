@@ -78,6 +78,42 @@
   headers = { Link = "<https://amzn.to/4mcKkHc?tag=smarthomepro2-21>; rel=\"sponsored\"" }
 
   [[redirects]]
+  from = "/go/nest-audio"
+  to = "https://amzn.to/4kUrtj5?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4kUrtj5?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/homepod-mini"
+  to = "https://amzn.to/4o5nMd0?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4o5nMd0?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/echo-4gen"
+  to = "https://amzn.to/3TXFFgh?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3TXFFgh?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/sonos-one"
+  to = "https://amzn.to/3IYQRa0?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3IYQRa0?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/echo-show-8"
+  to = "https://amzn.to/4m9XNQ2?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4m9XNQ2?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/nest-hub-2gen"
+  to = "https://amzn.to/44KNWu7?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/44KNWu7?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+  [[redirects]]
   from = "/go/ofertas"
   to = "https://amzn.to/4l83vB9?tag=smarthomepro2-21"
   status = 301
