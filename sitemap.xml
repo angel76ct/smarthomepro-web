@@ -2,24 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://smarthomepro-reviews.netlify.app/</loc>
-    <lastmod>2025-08-04</lastmod>
+    <lastmod>2025-08-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://smarthomepro-reviews.netlify.app/mejor-altavoz-inteligente-2025.html</loc>
-    <lastmod>2025-08-04</lastmod>
+    <loc>https://smarthomepro-reviews.netlify.app/mejor-altavoz-inteligente-2025</loc>
+    <lastmod>2025-08-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smarthomepro-reviews.netlify.app/smart-home-2025.html</loc>
-    <lastmod>2025-08-04</lastmod>
+    <loc>https://smarthomepro-reviews.netlify.app/smart-home-2025</loc>
+    <lastmod>2025-08-07</lastmod>
     <priority>0.8</priority>
   </url>
- <url>
-    <loc>https://smarthomepro-reviews.netlify.app/politica-privacidad.html</loc>
-    <lastmod>2025-07-01</lastmod>
+  <url>
+    <loc>https://smarthomepro-reviews.netlify.app/politica-privacidad</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
   </url>
-  
 </urlset>
