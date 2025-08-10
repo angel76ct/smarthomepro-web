@@ -158,7 +158,39 @@
   to = "https://amzn.to/3GUmxgi?tag=smarthomepro2-21"
   status = 301
   headers = { Link = "<https://amzn.to/3GUmxgi?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+# ======================
+# OFERTAS EXCLUSIVAS AGOSTO 2025
+# ======================
 
+[[redirects]]
+  from = "/go/echo-hub-oferta"
+  to = "https://amzn.to/41cHQAo?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/41cHQAo?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/philips-hue-pack-oferta"
+  to = "https://amzn.to/3UyTLVu?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3UyTLVu?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/nest-thermostat-oferta"
+  to = "https://amzn.to/3IO3YuH?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3IO3YuH?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/todas-las-ofertas"
+  to = "https://amzn.to/4fd8cYY?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4fd8cYY?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/smart-home-pack"
+  to = "https://amzn.to/472u5rP?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/472u5rP?tag=smarthomepro2-21>; rel=\"sponsored\"" }
 # Categorías
 [[redirects]]
   from = "/go/ofertas"
