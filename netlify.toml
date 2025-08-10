@@ -191,6 +191,26 @@
   to = "https://amzn.to/472u5rP?tag=smarthomepro2-21"
   status = 301
   headers = { Link = "<https://amzn.to/472u5rP?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+# Redirección para la nueva guía echo-dot-vs-nest-audio
+[[redirects]]
+  from = "/echo-dot-vs-nest-audio"
+  to = "/echo-dot-vs-nest-audio.html"
+  status = 200
+
+# Asegúrate de que estos ya existen
+[[redirects]]
+  from = "/go/echo-dot"
+  to = "https://amzn.to/4o2IrhZ?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4o2IrhZ?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/nest-audio"
+  to = "https://amzn.to/4kUrtj5?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4kUrtj5?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+  
 # Categorías
 [[redirects]]
   from = "/go/ofertas"
