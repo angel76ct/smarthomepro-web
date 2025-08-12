@@ -14,6 +14,12 @@
   from = "/mejor-altavoz-inteligente-2025"
   to = "/mejor-altavoz-inteligente-2025.html"
   status = 200
+  
+[[redirects]]
+  from = "/smart-home-barato-2025"
+  to = "/smart-home-barato-2025.html"
+  status = 200
+
 
 # Páginas legales
 [[redirects]]
