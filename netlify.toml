@@ -185,6 +185,33 @@
   to = "https://amzn.to/3IO3YuH?tag=smarthomepro2-21"
   status = 301
   headers = { Link = "<https://amzn.to/3IO3YuH?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+  # ======================
+# Robots Aspiradores
+[[redirects]]
+  from = "/go/roborock-q8"
+  to = "https://amzn.to/3HyemXe?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3HyemXe?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/ecovacs-t20"
+  to = "https://amzn.to/45ip11t?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/45ip11t?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/roomba-j7"
+  to = "https://amzn.to/45F0GSn?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/45F0GSn?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/eufy-l70"
+  to = "https://amzn.to/3UXFEcC?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/3UXFEcC?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+# ======================
 
 [[redirects]]
   from = "/go/todas-las-ofertas"
