@@ -247,6 +247,12 @@
 # Categorías
 [[redirects]]
   from = "/go/ofertas"
+  to = "https://amzn.to/4lSoJEk?tag=smarthomepro2-21"
+  status = 301
+  headers = { Link = "<https://amzn.to/4lSoJEk?tag=smarthomepro2-21>; rel=\"sponsored\"" }
+
+[[redirects]]
+  from = "/go/ofertas"
   to = "https://amzn.to/4l83vB9?tag=smarthomepro2-21"
   status = 301
 
